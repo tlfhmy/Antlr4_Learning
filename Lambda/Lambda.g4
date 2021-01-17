@@ -1,6 +1,7 @@
 grammar Lambda;
 
-term :var|'(' term ')'|term term|lambda var+ dot term;
+term :var|'(' term ')'|term term|desc;
+desc:lambda var+ dot term;
 lambda : 'λ';
 dot : '.';
 var : ID;
